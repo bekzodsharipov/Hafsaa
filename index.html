@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <main>
     <section class="webiner">
         <div class="webiner__container">
             <div class="webiner__top">
@@ -59,6 +60,7 @@
             </div>
         </div>
     </section>
+</main>
 
     <script defer>
         const timer = document.querySelector(".timer"), minutes = timer.querySelectorAll("span")[0], seconds = timer.querySelectorAll("span")[1]; let totalSeconds = 120; function updateTimer() { const t = Math.floor(totalSeconds / 60), e = totalSeconds % 60; minutes.textContent = String(t).padStart(2, "0"), seconds.textContent = String(e).padStart(2, "0"), totalSeconds > 0 ? totalSeconds-- : (clearInterval(timerInterval), alert("Vaqt tugadi!")) } const timerInterval = setInterval(updateTimer, 1e3); document.addEventListener("DOMContentLoaded", (() => { document.querySelectorAll(".registerBtn").forEach((e => { e.addEventListener("click", (() => { "function" == typeof fbq && fbq("track", "CompleteRegistration") })) })) }));
